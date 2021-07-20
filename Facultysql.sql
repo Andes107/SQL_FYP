@@ -15,9 +15,26 @@ create table tblFaculties(
 		https://social.msdn.microsoft.com/Forums/sqlserver/en-US/2e6fb2f4-359d-4097-b2c2-59e3c3709ba1/varchar-minimum-length-check?forum=sqlgetstarted
 	*/
 	constraint chk_tblFaculty_roomNo check
-	(roomNo like('[0-9][0-9][0-9][0-9][A-Z]') or 
-	roomNo like('[0-9][0-9][0-9][0-9][A-Z][A-Z]')),
+	(roomNo like('[0-9][0-9][0-9][0-9]') or 
+	roomNo like('[0-9][0-9][0-9][0-9][A-Z]')),
 
 	constraint chk_tblFaculty_facultyCode check
 	(facultyCode like('[A-Z][A-Z]'))
 );
+
+insert into tblFaculties values ('cafarella','Michelle Cafarella','3702','MC');
+insert into tblFaculties values ('fan','Jim Fan','3372','JF');
+insert into tblFaculties values ('garcia','Holly Garcia','3068','HG');
+insert into tblFaculties values ('hui','Nancy Hui','3556','NH');
+insert into tblFaculties values ('jag','Hector Jag','3923','HJ');
+insert into tblFaculties values ('larson','Pauline Larson','3588','PL');
+insert into tblFaculties values ('naughton','Jack Naughton','2628','JN');
+insert into tblFaculties values ('pantel','Patty Pantel','2345','PP');
+insert into tblFaculties values ('parames','Agnes Parames','3776','AP');
+insert into tblFaculties values ('ray','Nelson Ray','4178','NR');
+insert into tblFaculties values ('ruden','Elke Ruden','3158','ER');
+insert into tblFaculties values ('soliman','Mary Soliman','4116','MS');
+insert into tblFaculties values ('swart','Gerry Swart','3522','GS');
+insert into tblFaculties values ('thorn','Martin Thorn','3538','MT');
+insert into tblFaculties values ('lock','Karl Lock','3532','KL');
+insert into tblFaculties values ('zhang','Vincent Zhang','3408','VZ');
