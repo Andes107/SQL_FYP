@@ -9,15 +9,17 @@ create table tblFyp(
 	type varchar(7) not null,
 	constraint CHK_Fyp_type check (type in ('project','thesis')),
 	otherRequirements varchar(200),
-	minStudents smallint not null,
+	minStudents smallint not null
 	constraint DF_tblFyp_minStudents default 1,
 	/*
 	1. Default inline constraint
 		https://dba.stackexchange.com/a/159361
+	2. No comma before default constraint
+		https://stackoverflow.com/a/40936738/8953255
 	*/
-	maxStudents smallint not null,
+	maxStudents smallint not null
 	constraint DF_tblFyp_maxStudents default 1,
-	isAvailable bit not null,
+	isAvailable bit not null
 	constraint DF_tblFyp_isAvailable default 1,
 	constraint CHK_Fyp_min_max_Students	check(
 		(minStudents between 1 and maxStudents) and
