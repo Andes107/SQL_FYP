@@ -44,3 +44,13 @@ insert into tblProjectGroups values (13,null,null,null);
 insert into tblProjectGroups values (14,null,null,null);
 insert into tblProjectGroups values (15,null,null,null);
 insert into tblProjectGroups values (16,null,null,null);
+
+update tblProjectGroups set groupCode='MC1',assignedFYP=2,reader='ray' where PK_tblProjectGroups=1;
+update tblProjectGroups set groupCode='MC2',assignedFYP=11,reader='ray' where PK_tblProjectGroups=2;
+update tblProjectGroups set groupCode='JNHJ1',assignedFYP=5 where PK_tblProjectGroups=3;
+update tblProjectGroups set groupCode='JNHJ2',assignedFYP=5,reader='cafarella' where PK_tblProjectGroups=4;
+update tblProjectGroups set groupCode='JNHJ3',assignedFYP=5 where PK_tblProjectGroups=5;
+update tblProjectGroups set groupCode='HJ1',assignedFYP=26,reader='ruden' where PK_tblProjectGroups=6;
+update tblProjectGroups set groupCode='JF1',assignedFYP=30,reader='naughton' where PK_tblProjectGroups=7;
+update tblProjectGroups set groupCode='JN1',assignedFYP=4,reader='fan' where PK_tblProjectGroups=8;
+update tblProjectGroups set groupCode='NH1',assignedFYP=13,reader='naughton' where PK_tblProjectGroups=9;
