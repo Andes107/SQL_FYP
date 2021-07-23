@@ -13,6 +13,13 @@ go
 create nonclustered index IX_tblFyp_cat_title
 on tblFyp(category)
 include(title);
+/*
+	1. This doesn't work because it doesn't contain the join attribute
+	2. Even if you contain the join attribute, the main cost is on sorting non-join
+	attributes.
+	3. In fact, since tblFyp and tblFaculties both are not sorted according to the selected
+	attributes, I can't add any index to facilitate the sort!
+*/
 go
 drop index tblFyp.IX_tblFyp_cat_title;
 go
