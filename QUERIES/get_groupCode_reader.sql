@@ -42,6 +42,6 @@ of the FYP and the name of the reader for the project group, if any. Order the r
 group code ascending
 
 Performance:
-	1. After the tuning, the cost has been cut from 0.03 to 0.16 seconds. 
+	1. After the tuning, the cost fell from 0.03 to 0.16 seconds. 
 */
 go
