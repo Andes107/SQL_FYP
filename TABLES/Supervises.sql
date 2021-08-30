@@ -8,6 +8,10 @@ create table tblSupervises(
 	primary key(username, fypId)
 );
 
+--New updates for ETag
+alter table tblSupervises
+ADD etag varchar(14);
+
 insert into tblSupervises values ('cafarella',1);
 insert into tblSupervises values ('cafarella',2);
 insert into tblSupervises values ('cafarella',11);

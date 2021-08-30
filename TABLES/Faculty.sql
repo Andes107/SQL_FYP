@@ -22,6 +22,10 @@ create table tblFaculties(
 	(facultyCode like('[A-Z][A-Z]'))
 );
 
+--New updates for ETag
+alter table tblFaculties
+ADD etag varchar(14);
+
 insert into tblFaculties values ('cafarella','Michelle Cafarella','3702','MC');
 insert into tblFaculties values ('fan','Jim Fan','3372','JF');
 insert into tblFaculties values ('garcia','Holly Garcia','3068','HG');

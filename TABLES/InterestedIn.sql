@@ -11,6 +11,24 @@ create table tblInterestedIn(
 		priority in (1,2,3,4,5))
 );
 
+--New updates for ETag
+alter table tblInterestedIn
+ADD etag varchar(14);
+update tblInterestedIn
+set etag = '202012'
+where fypId = 1;
+--The point of this test is that sql optimizer is smart
+--etag is indeed not in the primary index
+--but if you have the primary key, you can go for the primary index
+--then retrieve what you want
+--locally speaking, this is optimized
+select etag
+from tblInterestedIn
+where fypId = 1 and groupId = 6 and etag = '202012';
+update tblInterestedIn
+set etag = null
+where fypId = 1;
+
 insert into tblInterestedIn values (1,6,1);
 insert into tblInterestedIn values (1,11,1);
 insert into tblInterestedIn values (2,1,2);

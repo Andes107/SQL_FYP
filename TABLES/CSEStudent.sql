@@ -12,12 +12,10 @@ create table tblCSEStudents(
 --New updates for ETag
 alter table tblCSEStudents
 ADD etag varchar(14);
-create nonclustered index IX_tblCSEStudents_etag
-on tblCSEStudents(PK_tblCSEStudents,etag);
 
 --test
 update tblCSEStudents
-set etag = '20211230210004'
+set etag = null
 where PK_tblCSEStudents = 'brunoho';
 select PK_tblCSEStudents, etag
 from tblCSEStudents;

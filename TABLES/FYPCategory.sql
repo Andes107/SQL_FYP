@@ -10,6 +10,10 @@ create table tblFypCategories(
 	'Vision and Graphics'))
 );
 
+--New updates for ETag
+alter table tblFypCategories
+ADD etag varchar(14);
+
 insert into tblFypCategories values ('Artificial Intelligence');
 insert into tblFypCategories values ('Computer Games');
 insert into tblFypCategories values ('Computer Security');

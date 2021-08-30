@@ -20,6 +20,10 @@ create table tblRequirementGrades(
 	primary key (facultyUsername, studentUsername)
 );
 
+--New updates for ETag
+alter table tblRequirementGrades
+ADD etag varchar(14);
+
 insert into tblRequirementGrades values ('naughton','lesterlo',66,72,75,80);
 insert into tblRequirementGrades values ('cafarella','lesterlo',60,70,75,80);
 insert into tblRequirementGrades values ('hui','terrytam',75,67,72,77);

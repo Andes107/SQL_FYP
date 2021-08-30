@@ -19,6 +19,11 @@ create table tblProjectGroups(
 		on delete set null
 );
 
+--New updates for ETag
+alter table tblProjectGroups
+ADD etag varchar(14);
+--No index because it is assumed that primary key will follow
+
 create unique nonclustered index IX_tblProjectGroups_groupCode
 ON tblProjectGroups(groupCode)
 where groupCode is not null;
